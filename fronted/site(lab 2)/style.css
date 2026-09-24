@@ -1,0 +1,12 @@
+body{font-family:Arial,sans-serif;max-width:1000px;margin:0 auto;padding:24px;line-height:1.55;background:#fafafa;color:#1f2937}
+header,footer,section,article,aside{background:white;padding:20px;margin:14px 0;border-radius:14px}
+nav{background:#111827;padding:12px;border-radius:12px}
+nav ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0}
+nav a{color:white;text-decoration:none;padding:7px 10px;border-radius:8px}
+nav a:hover{background:#374151}
+.hero{max-width:100%;height:auto;border-radius:12px}
+figure{margin:18px 0;text-align:center}
+figcaption{color:#6b7280;margin-top:6px}
+a{color:#2563eb}
+code{background:#f3f4f6;padding:2px 5px;border-radius:5px}
+.back{margin-top:10px}
