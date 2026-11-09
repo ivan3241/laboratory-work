@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="180" viewBox="0 0 700 180">
+<rect width="700" height="180" rx="30" fill="#fef3c7"/>
+<g fill="#d1d5db" stroke="#6b7280" stroke-width="3">
+<circle cx="100" cy="70" r="35"/><circle cx="250" cy="70" r="35"/><circle cx="400" cy="70" r="35"/><circle cx="550" cy="70" r="35"/>
+<path d="M55 155c8-45 25-65 45-65s37 20 45 65z"/><path d="M205 155c8-45 25-65 45-65s37 20 45 65z"/><path d="M355 155c8-45 25-65 45-65s37 20 45 65z"/><path d="M505 155c8-45 25-65 45-65s37 20 45 65z"/>
+</g><text x="350" y="28" text-anchor="middle" font-family="Arial" font-size="22" fill="#374151">Друзья</text>
+</svg>

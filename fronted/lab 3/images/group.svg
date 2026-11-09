@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="220" viewBox="0 0 700 220">
+<rect width="700" height="220" rx="30" fill="#eff6ff"/>
+<g fill="#93c5fd" stroke="#1d4ed8" stroke-width="2">
+<circle cx="130" cy="85" r="28"/><circle cx="245" cy="85" r="28"/><circle cx="360" cy="85" r="28"/><circle cx="475" cy="85" r="28"/><circle cx="590" cy="85" r="28"/>
+<path d="M90 165c5-38 18-55 40-55s35 17 40 55z"/><path d="M205 165c5-38 18-55 40-55s35 17 40 55z"/><path d="M320 165c5-38 18-55 40-55s35 17 40 55z"/><path d="M435 165c5-38 18-55 40-55s35 17 40 55z"/><path d="M550 165c5-38 18-55 40-55s35 17 40 55z"/>
+</g><text x="350" y="30" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#1e3a8a">ПИЖ-б-о-26-2</text>
+</svg>

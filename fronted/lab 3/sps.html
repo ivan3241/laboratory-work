@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- sps.html — страница «Сложные программные системы» -->
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СПС — Личный сайт студента</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <a id="logo" href="index.html" title="На главную">ИП</a>
+  <h1>Инженерия сложных программных систем</h1>
+  <nav aria-label="Навигация по сайту"><ul>
+    <li><a href="index.html">Главная</a></li><li><a href="about.html">Обо мне</a></li><li><a href="friends.html">Друзья</a></li><li><a href="hobbies.html">Увлечения</a></li><li><a href="group.html">Группа</a></li><li><a href="sps.html" aria-current="page">СПС</a></li>
+  </ul></nav>
+</header>
+<main>
+  <section id="architecture">
+    <h2>Архитектурный контекст</h2>
+    <p><span class="term">Сложная программная система</span> (СПС) состоит из множества взаимодействующих компонентов: интерфейсов, сервисов, баз данных и средств мониторинга. Главная задача инженера — сделать такую систему <span class="highlight">понятной, надёжной и сопровождаемой</span>.</p>
+    <blockquote>
+      <p>Сложность нельзя убрать полностью, но её можно разделить на понятные части.</p>
+      <p class="quote-author">— принцип разделения ответственности</p>
+    </blockquote>
+    <article>
+      <h3>Слои архитектуры</h3>
+      <ol class="layers">
+        <li><strong>Уровень представления</strong>
+          <ul><li>веб-интерфейс и панели мониторинга</li><li>HTML, CSS, JavaScript</li></ul></li>
+        <li><strong>Уровень бизнес-логики</strong>
+          <ul><li>серверные сервисы и API</li><li>обработка запросов и правил предметной области</li></ul></li>
+        <li><strong>Уровень данных</strong>
+          <ul><li>реляционные и нереляционные базы данных</li><li>кэширование и очереди сообщений</li></ul></li>
+      </ol>
+    </article>
+  </section>
+
+  <section id="components">
+    <h2>Ключевые компоненты</h2>
+    <table>
+      <caption>Основные компоненты системы и их состояние</caption>
+      <thead>
+        <tr><th>Компонент</th><th>Назначение</th><th>Технология</th><th>Статус</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Web-интерфейс</td><td>Панель оператора</td><td>HTML, CSS, JS</td><td><span class="status status-ok">OK</span></td></tr>
+        <tr><td>API-шлюз</td><td>Единая точка входа для запросов</td><td>REST, JSON</td><td><span class="status status-ok">OK</span></td></tr>
+        <tr><td>База данных</td><td>Хранение данных системы</td><td>PostgreSQL</td><td><span class="status status-warn">WARN</span></td></tr>
+        <tr><td>Мониторинг</td><td>Сбор метрик и оповещения</td><td>Prometheus, Grafana</td><td><span class="status status-error">ERROR</span></td></tr>
+      </tbody>
+    </table>
+    <p><a href="#top">Вернуться к началу страницы</a></p>
+  </section>
+
+  <section id="stack">
+    <h2>Технологический стек</h2>
+    <dl class="stack">
+      <dt>Frontend:</dt>
+      <dd>HTML5, CSS3, адаптивная вёрстка.</dd>
+      <dt>Инструменты:</dt>
+      <dd>Visual Studio Code, Git, инструменты разработчика в браузере.</dd>
+      <dt>Контроль качества:</dt>
+      <dd>валидация кода, <span class="important">проверка на разных устройствах</span>.</dd>
+    </dl>
+  </section>
+
+  <aside id="security">
+    <h2>Безопасность</h2>
+    <p>Интерфейсы сложных систем должны быть <span class="important">контрастными и читаемыми</span>: оператор не должен ошибиться из-за плохой вёрстки.</p>
+  </aside>
+</main>
+<footer><p>&copy; 2026 Иван Попков, группа ПИЖ-б-о-26-2</p></footer>
+</body>
+</html>
