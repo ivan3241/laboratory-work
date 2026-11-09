@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Доступная карточка товара</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+<h1>Каталог товаров</h1>
+<!-- Область для объявлений скринридерам -->
+<div aria-live="polite" class="visually-hidden" id="live-region"></div>
+<!-- Карточка товара -->
+<article class="card" aria-labelledby="product-title" aria-describedby="product-desc">
+<!-- Декоративное изображение (скрыто от скринридеров) -->
+<div class="card__image-wrapper">
+<img src="images/product.jpg" alt="" aria-hidden="true" class="card__image">
+<span class="card__badge" aria-hidden="true">Хит</span>
+</div>
+<!-- Контентная часть -->
+<div class="card__content">
+<h2 class="card__title" id="product-title">Беспроводные наушники</h2>
+<p class="card__description" id="product-desc">
+Отличный звук, шумоподавление и до 30 часов работы без подзарядки.
+</p>
+<!-- Цена с ARIA-меткой -->
+<p class="card__price" aria-label="Цена товара: 7990 рублей">
+<span class="card__price-value">7 990 ₽</span>
+</p>
+<!-- Кнопка добавления в корзину -->
+<button
+class="card__button button button--primary"
+type="button"
+aria-label="Добавить Беспроводные наушники в корзину"
+onclick="addToCart()"
+>
+<span class="button__icon" aria-hidden="true">🛒</span>
+<span class="button__text">В корзину</span>
+</button>
+<!-- Кнопка "Подробнее" -->
+<a href="#" class="card__link link" aria-label="Подробнее о Беспроводных наушниках">
+Подробнее
+</a>
+</div>
+
+<!-- Аккордеон -->
+<section class="accordion" aria-labelledby="accordion-title">
+<h3 class="visually-hidden" id="accordion-title">Информация о товаре</h3>
+
+<details class="accordion__item" name="product-info" open>
+<summary class="accordion__summary">Характеристики</summary>
+<div class="accordion__content">
+<ul class="accordion__list">
+<li>Тип подключения: Bluetooth 5.3</li>
+<li>Время работы: до 30 часов</li>
+<li>Шумоподавление: активное (ANC)</li>
+<li>Вес: 250 г</li>
+</ul>
+</div>
+</details>
+
+<details class="accordion__item" name="product-info">
+<summary class="accordion__summary">Доставка и оплата</summary>
+<div class="accordion__content">
+<p>Курьером за 1–3 дня или самовывозом из пункта выдачи. Оплата картой онлайн или при получении.</p>
+</div>
+</details>
+
+<details class="accordion__item" name="product-info">
+<summary class="accordion__summary">Гарантия и возврат</summary>
+<div class="accordion__content">
+<p>Гарантия 12 месяцев. Возврат товара надлежащего качества - в течение 14 дней.</p>
+</div>
+</details>
+</section>
+</article>
+</main>
+<script>
+function addToCart() {
+const liveRegion = document.getElementById('live-region');
+liveRegion.textContent = 'Товар добавлен в корзину';
+// Очистка через 3 секунды
+setTimeout(() => {
+liveRegion.textContent = '';
+}, 3000);
+}
+</script>
+</body>
+</html>
