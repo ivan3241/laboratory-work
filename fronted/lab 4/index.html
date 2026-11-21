@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- index.html — главная страница -->
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — Личный сайт студента</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <a id="logo" href="index.html" title="На главную">ИП</a>
+  <h1>Личный сайт Ивана Попкова</h1>
+  <p>Студент группы <strong>ПИЖ-б-о-26-2</strong></p>
+  <nav aria-label="Навигация по сайту">
+    <ul>
+      <li><a href="index.html" aria-current="page">Главная</a></li>
+      <li><a href="about.html">Обо мне</a></li>
+      <li><a href="friends.html">Друзья</a></li>
+      <li><a href="hobbies.html">Увлечения</a></li>
+      <li><a href="group.html">Группа</a></li>
+      <li><a href="sps.html">СПС</a></li>
+    </ul>
+  </nav>
+</header>
+
+<aside class="side-left" aria-label="Содержание страницы">
+  <h2>На странице</h2>
+  <ul>
+    <li><a href="#welcome">Добро пожаловать</a></li>
+    <li><a href="#group-info">Учебная группа</a></li>
+    <li><a href="#features">Что есть на сайте</a></li>
+  </ul>
+</aside>
+
+<main>
+  <section id="welcome">
+    <h2>Добро пожаловать!</h2>
+    <figure>
+      <img class="hero" src="images/logo.svg" alt="Логотип личного сайта Ивана Попкова и название учебной группы" width="700" height="220">
+      <figcaption>Логотип моего сайта</figcaption>
+    </figure>
+    <p>Здравствуйте, меня зовут <strong>Попков Иван</strong>, и это мой первый учебный сайт. Здесь вы найдёте рассказ обо мне, моих <em>хобби</em>, друзьях и группе.</p>
+    <p><a href="about.html#skills">Перейти к моим навыкам</a> или посмотреть <a href="https://github.com/ivan3241" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+  </section>
+  <section id="group-info">
+    <h2>Учебная группа</h2>
+    <p>Номер группы: <span class="highlight">ПИЖ-б-о-26-2</span>.</p>
+  </section>
+  <section id="features">
+    <h2>Что есть на сайте</h2>
+    <ul class="row">
+      <li class="card"><a href="about.html">Информация обо мне</a></li>
+      <li class="card"><a href="friends.html">Рассказ о друзьях</a></li>
+      <li class="card"><a href="hobbies.html">Мои увлечения</a></li>
+      <li class="card"><a href="group.html">Сведения об учебной группе</a></li>
+      <li class="card"><a href="sps.html">Страница о <span class="term">сложных программных системах</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<aside class="side-right">
+  <h2>Полезная ссылка</h2>
+  <p>Для изучения веб-разработки можно использовать <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">документацию по HTML на MDN</a>.</p>
+</aside>
+
+<footer><p>&copy; 2026 Иван Попков, группа ПИЖ-б-о-26-2</p></footer>
+</body>
+</html>

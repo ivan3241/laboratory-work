@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- sps.html — страница «Сложные программные системы» -->
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СПС — Личный сайт студента</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <a id="logo" href="index.html" title="На главную">ИП</a>
+  <h1>Инженерия сложных программных систем</h1>
+  <nav aria-label="Навигация по сайту">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">Обо мне</a></li>
+      <li><a href="friends.html">Друзья</a></li>
+      <li><a href="hobbies.html">Увлечения</a></li>
+      <li><a href="group.html">Группа</a></li>
+      <li><a href="sps.html" aria-current="page">СПС</a></li>
+    </ul>
+  </nav>
+</header>
+
+<aside class="side-left" aria-label="Содержание страницы">
+  <h2>На странице</h2>
+  <ul>
+    <li><a href="#architecture">Архитектурный контекст</a></li>
+    <li><a href="#components">Ключевые компоненты</a></li>
+    <li><a href="#interfaces">Интерфейсы</a></li>
+    <li><a href="#stack">Технологический стек</a></li>
+    <li><a href="#roadmap">Направления развития</a></li>
+  </ul>
+</aside>
+
+<main>
+  <section id="architecture">
+    <h2>Архитектурный контекст</h2>
+    <p><span class="term">Сложная программная система</span> (СПС) состоит из множества взаимодействующих компонентов: интерфейсов, сервисов, баз данных и средств мониторинга. Главная задача инженера — сделать такую систему <span class="highlight">понятной, надёжной и сопровождаемой</span>.</p>
+    <blockquote>
+      <p>Сложность нельзя убрать полностью, но её можно разделить на понятные части.</p>
+      <p class="quote-author">— принцип разделения ответственности</p>
+    </blockquote>
+    <h3>Слои архитектуры</h3>
+    <!-- Grid: три слоя в ряд, на узком экране перестраиваются -->
+    <ol class="layers">
+      <li><strong>Уровень представления</strong>
+        <ul><li>веб-интерфейс и панели мониторинга</li><li>HTML, CSS, JavaScript</li></ul></li>
+      <li><strong>Уровень бизнес-логики</strong>
+        <ul><li>серверные сервисы и API</li><li>обработка запросов и правил предметной области</li></ul></li>
+      <li><strong>Уровень данных</strong>
+        <ul><li>реляционные и нереляционные базы данных</li><li>кэширование и очереди сообщений</li></ul></li>
+    </ol>
+  </section>
+
+  <section id="components">
+    <h2>Ключевые компоненты</h2>
+    <p>Основные компоненты системы и их состояние:</p>
+    <!-- Grid из карточек; внутри каждой карточки — Flexbox -->
+    <div class="cards">
+      <article class="card component">
+        <div class="component-head"><h3>Web-интерфейс</h3><span class="status status-ok">OK</span></div>
+        <p>Панель оператора</p>
+        <p><span class="term">Технология:</span> HTML, CSS, JS</p>
+      </article>
+      <article class="card component">
+        <div class="component-head"><h3>API-шлюз</h3><span class="status status-ok">OK</span></div>
+        <p>Единая точка входа для запросов</p>
+        <p><span class="term">Технология:</span> REST, JSON</p>
+      </article>
+      <article class="card component">
+        <div class="component-head"><h3>База данных</h3><span class="status status-warn">WARN</span></div>
+        <p>Хранение данных системы</p>
+        <p><span class="term">Технология:</span> PostgreSQL</p>
+      </article>
+      <article class="card component">
+        <div class="component-head"><h3>Мониторинг</h3><span class="status status-error">ERROR</span></div>
+        <p>Сбор метрик и оповещения</p>
+        <p><span class="term">Технология:</span> Prometheus, Grafana</p>
+      </article>
+    </div>
+    <p><a href="#top">Вернуться к началу страницы</a></p>
+  </section>
+
+  <section id="interfaces">
+    <h2>Интерфейсы</h2>
+    <p>Компоненты обмениваются данными через чётко определённые интерфейсы:</p>
+    <ul class="interfaces">
+      <li><span class="node">Web-интерфейс</span><span class="arrow" role="img" aria-label="обращается к">→</span><span class="node">API-шлюз</span><span class="proto">REST, JSON</span></li>
+      <li><span class="node">API-шлюз</span><span class="arrow" role="img" aria-label="читает и пишет в">→</span><span class="node">База данных</span><span class="proto">SQL</span></li>
+      <li><span class="node">Мониторинг</span><span class="arrow" role="img" aria-label="собирает метрики с">→</span><span class="node">API-шлюз</span><span class="proto">метрики Prometheus</span></li>
+    </ul>
+  </section>
+
+  <section id="stack">
+    <h2>Технологический стек</h2>
+    <dl class="stack">
+      <dt>Frontend:</dt>
+      <dd>HTML5, CSS3, адаптивная вёрстка (Flexbox, Grid).</dd>
+      <dt>Инструменты:</dt>
+      <dd>Visual Studio Code, Git, инструменты разработчика в браузере.</dd>
+      <dt>Контроль качества:</dt>
+      <dd>валидация кода, <span class="important">проверка на разных устройствах</span>.</dd>
+    </dl>
+  </section>
+
+  <section id="roadmap">
+    <h2>Направления развития</h2>
+    <ul class="cards narrow">
+      <li class="card"><h3>Наблюдаемость</h3><p>Восстановить мониторинг и настроить оповещения.</p></li>
+      <li class="card"><h3>Надёжность</h3><p>Устранить предупреждение базы данных, добавить резервирование.</p></li>
+      <li class="card"><h3>Автоматизация</h3><p>Проверки кода и сборка при каждом изменении.</p></li>
+      <li class="card"><h3>Доступность</h3><p>Контрастные интерфейсы и проверка на разных устройствах.</p></li>
+    </ul>
+  </section>
+</main>
+
+<aside class="side-right" id="security">
+  <h2>Безопасность</h2>
+  <p>Интерфейсы сложных систем должны быть <span class="important">контрастными и читаемыми</span>: оператор не должен ошибиться из-за плохой вёрстки.</p>
+</aside>
+
+<footer><p>&copy; 2026 Иван Попков, группа ПИЖ-б-о-26-2</p></footer>
+</body>
+</html>
