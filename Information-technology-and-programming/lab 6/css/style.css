@@ -1,0 +1,222 @@
+/* Сайт-визитка архитектора. Mobile First + Grid + Flexbox + БЭМ */
+
+/* === 1. CSS-переменные (тема) === */
+:root {
+    --color-bg: #f5f2ec;
+    --color-text: #161616;
+    --color-muted: #6b665d;
+    --color-line: #cfc8bb;
+    --color-accent: #c4511d;
+
+    /* clamp(мин, vw, макс) — шрифт плавно растёт вместе с окном */
+    --fs-hero: clamp(2.5rem, 10vw, 8rem);
+    --fs-title: clamp(1.5rem, 4vw, 3rem);
+
+    --pad: clamp(1rem, 5vw, 4rem);   /* внешние отступы */
+    --gap: clamp(1rem, 3vw, 2rem);   /* промежутки сетки */
+}
+
+/* Тёмная тема (будет переключаться в следующей работе) */
+:root[data-theme="dark"] {
+    --color-bg: #121212;
+    --color-text: #f2efe9;
+    --color-muted: #9a958b;
+    --color-line: #333;
+    --color-accent: #ff7a45;
+}
+
+/* === 2. Базовые стили === */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* padding и border входят в ширину */
+    margin: 0;
+    padding: 0;
+}
+
+/* === 3. Каркас страницы (Grid + grid-template-areas) === */
+.page {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto; /* подвал прижат к низу */
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.page__header { grid-area: header; }
+.page__main   { grid-area: main; }
+.page__footer { grid-area: footer; }
+
+/* === 4. Шапка и подвал (Flexbox) === */
+.header,
+.footer {
+    display: flex;
+    justify-content: space-between; /* по краям */
+    align-items: center;
+    padding: 1rem var(--pad);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.footer {
+    border-top: 1px solid var(--color-line);
+    border-bottom: 0;
+    color: var(--color-muted);
+}
+
+.header__logo {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: inherit;
+    text-decoration: none;
+}
+
+.header__nav {
+    display: flex;
+    gap: var(--gap);
+}
+
+.header__link,
+.footer__link {
+    color: var(--color-muted);
+    text-decoration: none;
+}
+
+.header__link:hover,
+.footer__link:hover {
+    color: var(--color-accent);
+}
+
+/* === 5. Hero: крупная типографика === */
+.hero {
+    padding: clamp(3rem, 10vw, 8rem) var(--pad);
+}
+
+.hero__title {
+    font-size: var(--fs-hero);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    overflow-wrap: anywhere; /* длинное слово не вызовет горизонтальный скролл */
+}
+
+.hero__text {
+    max-width: 36ch;
+    margin-top: 1.5rem;
+    color: var(--color-muted);
+}
+
+/* === 6. Проекты (Grid) === */
+.projects {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr); /* мобильный: одна колонка */
+    gap: var(--gap);
+    padding: 0 var(--pad) var(--pad);
+}
+
+.project {
+    display: flex;           /* Flexbox внутри ячейки Grid */
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project__img {
+    display: block;
+    flex: 1;                 /* картинка занимает всю свободную высоту */
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* Подпись: номер и год — по размеру текста (min/max-content), название — остальное */
+.project__meta {
+    display: grid;
+    grid-template-columns: min-content 1fr max-content;
+    gap: 1rem;
+    align-items: baseline;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.project__num,
+.project__year {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}
+
+.project__name {
+    font-size: 1.25rem;
+}
+
+/* === 7. Контакты === */
+.contacts {
+    padding: var(--pad);
+    border-top: 1px solid var(--color-line);
+}
+
+.contacts__title {
+    font-size: var(--fs-title);
+    margin-bottom: 1rem;
+}
+
+.contacts__mail {
+    font-size: clamp(1.25rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-text);
+    overflow-wrap: anywhere;
+    border-bottom: 2px solid var(--color-accent);
+    text-decoration: none;
+}
+
+/* === 8. Анимация появления (без JS) === */
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(1.5rem); }
+    to   { opacity: 1; transform: none; }
+}
+
+.hero__title,
+.hero__text,
+.project {
+    animation: fade-up 0.8s ease both;
+}
+
+.hero__text { animation-delay: 0.2s; }
+
+/* Уважаем системную настройку «уменьшить движение» */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+}
+
+/* === 9. Адаптивность (Mobile First: только min-width) === */
+
+/* Планшеты: 2 колонки; широкая карточка занимает обе, высокая — две строки */
+@media (min-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project--wide { grid-column: 1 / -1; }
+    .project--tall { grid-row: span 2; }
+
+    .project--tall .project__img {
+        aspect-ratio: auto; /* высоту задают соседние карточки */
+        min-height: 18rem;
+    }
+}
+
+/* Десктопы: 12-колоночная асимметричная сетка */
+@media (min-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .project       { grid-column: span 4; }
+    .project--wide { grid-column: span 8; }
+    .project--tall { grid-column: span 4; grid-row: span 2; }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img"><title>Башня «Маяк»</title>
+<rect width="500" height="700" fill="#dfe3e6"/><rect y="610" width="500" height="90" fill="#b9bfc4"/>
+<rect x="170" y="70" width="160" height="540" fill="#2b2b2b"/><rect x="150" y="56" width="200" height="14" fill="#111"/>
+<g fill="#8a97a0"><rect x="190" y="100" width="36" height="22"/><rect x="274" y="100" width="36" height="22"/>
+<rect x="190" y="150" width="36" height="22"/><rect x="274" y="150" width="36" height="22"/>
+<rect x="190" y="200" width="36" height="22"/><rect x="274" y="200" width="36" height="22"/>
+<rect x="190" y="250" width="36" height="22"/><rect x="274" y="250" width="36" height="22"/>
+<rect x="190" y="300" width="36" height="22"/><rect x="274" y="300" width="36" height="22"/>
+<rect x="190" y="350" width="36" height="22"/><rect x="274" y="350" width="36" height="22"/>
+<rect x="190" y="400" width="36" height="22"/><rect x="274" y="400" width="36" height="22"/>
+<rect x="190" y="450" width="36" height="22"/><rect x="274" y="450" width="36" height="22"/></g>
+<rect x="190" y="510" width="120" height="100" fill="#f1d9a6"/>
+</svg>

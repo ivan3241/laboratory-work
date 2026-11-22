@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img"><title>Павильон «Арка»</title>
+<rect width="600" height="450" fill="#efe6d8"/><rect y="350" width="600" height="100" fill="#d8ccb8"/>
+<g fill="#2b2b2b"><path d="M60 350V210a60 60 0 0 1 120 0v140z"/><path d="M240 350V210a60 60 0 0 1 120 0v140z"/><path d="M420 350V210a60 60 0 0 1 120 0v140z"/></g>
+<g fill="#f1d9a6"><path d="M90 350V215a30 30 0 0 1 60 0v135z"/><path d="M270 350V215a30 30 0 0 1 60 0v135z"/><path d="M450 350V215a30 30 0 0 1 60 0v135z"/></g>
+</svg>
